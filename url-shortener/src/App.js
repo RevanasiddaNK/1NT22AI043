@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Box, Button } from '@mui/material';
+
+import ShortenerPage from './components/ShortenerPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Box sx={{ m: 2 }}>
+        <Button variant="outlined" href="/">Shortener</Button>
+        <Button variant="outlined" href="/stats" sx={{ ml: 2 }}>Statistics</Button>
+        <Routes>
+          <Route path="/" element={<ShortenerPage />} />
+          <Route path="/stats" element={<StatisticsPage />} />
+        </Routes>
+      </Box>
+    </Router>
   );
 }
 
