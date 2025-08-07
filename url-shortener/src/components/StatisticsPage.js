@@ -1,4 +1,3 @@
-// src/components/StatisticsPage.js
 import React, { useEffect, useState } from 'react';
 import {
   Container, Typography, Paper, Box, Table, TableBody, TableCell,
