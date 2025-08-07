@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Box, Button } from '@mui/material';
 
 import ShortenerPage from './components/ShortenerPage';
+import StatisticsPage from './components/StatisticsPage';
 
 function App() {
   return (
